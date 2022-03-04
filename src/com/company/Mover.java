@@ -4,5 +4,7 @@ package com.company;
 // number representing the speed at which the thing is moving.
 
 public interface Mover {
-    void move(int speed);
+    int move(int speed);
+
+    //int move  ();
 }

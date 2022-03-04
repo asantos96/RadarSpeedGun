@@ -8,6 +8,7 @@ package com.company;
 public class Boat extends Transportation implements Mover {
     private String typeOfBoat;
 
+
     //Constructor containing Transportation constructor and new variables created above
     public Boat(String typeOfBoat, boolean onLand , int yearBuilt){
         super(onLand, yearBuilt);
@@ -16,8 +17,9 @@ public class Boat extends Transportation implements Mover {
 
     //Move method created in the Mover interface being created below
     @Override
-    public void move(int speed) {
+    public int move(int speed) {
         System.out.println("The " + typeOfBoat + "was built in " + getYearBuilt() + "." + " It is moving at a speed of "
                 + speed + " MPH." + " Does it get used on land? " + getOnLand());
+        return speed;
     }
 }

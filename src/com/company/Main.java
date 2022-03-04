@@ -1,5 +1,8 @@
 package com.company;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class Main {
 
     public static void main(String[] args) {
@@ -25,6 +28,19 @@ public class Main {
 
         Koala firstKoala = new Koala ("Fuzzy" , 2, "P. cinereus" , "Australia");
         firstKoala.move(10);
+
+
+        RadarSpeedGun firstRadarSpeedGun = new RadarSpeedGun();
+        firstRadarSpeedGun.allMovingList.add(firstKoala);
+        firstRadarSpeedGun.allMovingList.add(firstBoat);
+
+        firstRadarSpeedGun.calculateTotalSpeed(125);
+        firstRadarSpeedGun.calculateTotalSpeed(10);
+
+
+        System.out.println(firstRadarSpeedGun.totalSpeed);
+
+
 
      }
 }

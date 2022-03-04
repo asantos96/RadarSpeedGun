@@ -18,9 +18,10 @@ public class Koala extends Animal implements Mover {
 
     //Implementing the move method from the Mover Interface
     @Override
-    public void move (int speed){
+    public int move (int speed){
         System.out.println( name + " the Koala belongs to the " + getSpecies() + " species. " + " He is native to the "
                 +  getNativeLocation() + ". " + " He is " + age + " years old and is moving at a speed of " +
                 speed + " MPH.");
+        return speed;
     }
 }
