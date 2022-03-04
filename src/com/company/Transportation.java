@@ -5,11 +5,13 @@ package com.company;
 public class Transportation {
     private boolean onLand;
     private int yearBuilt;
+    private int speed;
 
     //Constructor to carry into Boat child class
-    public Transportation (boolean onLand, int yearBuilt){
+    public Transportation (boolean onLand, int yearBuilt, int speed){
         this.onLand = onLand;
         this.yearBuilt = yearBuilt;
+        this.speed = speed;
     }
     //Setters and getters to access in Boat child class
     public void setOnLand(boolean onLand) {
@@ -26,5 +28,10 @@ public class Transportation {
         return yearBuilt;
     }
 
-
+    public void setSpeed(int speed) {
+        this.speed = speed;
+    }
+    public int getSpeed() {
+        return speed;
+    }
 }

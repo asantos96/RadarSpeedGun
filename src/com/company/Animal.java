@@ -5,10 +5,12 @@ package com.company;
 public class Animal {
     private String species;
     private String nativeLocation;
+    int speed;
 
-    public Animal(String species, String nativeLocation){
+    public Animal(String species, String nativeLocation, int speed){
         this.species = species;
         this.nativeLocation = nativeLocation;
+        this.speed = speed;
     }
 
     //Setters and Getters
@@ -25,5 +27,12 @@ public class Animal {
     }
     public String getNativeLocation() {
         return nativeLocation;
+    }
+
+    public void setSpeed(int speed) {
+        this.speed = speed;
+    }
+    public int getSpeed() {
+        return speed;
     }
 }

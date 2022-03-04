@@ -23,22 +23,37 @@ public class Main {
 //          superclass of all classes (ie, in the example stated above, both Animal and Vehicle would extend Mover)?
 
 
-        Boat firstBoat = new Boat("Racing Boat ", false, 2017 );
-        firstBoat.move(125);
+        Boat firstBoat = new Boat("Racing Boat" , false, 2017, 125);
+        firstBoat.move();
 
-        Koala firstKoala = new Koala ("Fuzzy" , 2, "P. cinereus" , "Australia");
-        firstKoala.move(10);
+        Koala firstKoala = new Koala ("Fuzzy" , 2, "P. cinereus" ,
+                "Australia", 10);
+        firstKoala.move();
+
+        Train firstTrain = new Train(100, true, 2002, 20);
+        firstTrain.move();
 
 
         RadarSpeedGun firstRadarSpeedGun = new RadarSpeedGun();
-        firstRadarSpeedGun.allMovingList.add(firstKoala);
         firstRadarSpeedGun.allMovingList.add(firstBoat);
+        firstRadarSpeedGun.allMovingList.add(firstKoala);
+        firstRadarSpeedGun.allMovingList.add(firstTrain);
 
-        firstRadarSpeedGun.calculateTotalSpeed(125);
-        firstRadarSpeedGun.calculateTotalSpeed(10);
+        firstRadarSpeedGun.calculateTotalSpeed(firstBoat.getSpeed());
+        firstRadarSpeedGun.calculateTotalSpeed(firstKoala.getSpeed());
+        firstRadarSpeedGun.calculateTotalSpeed(firstTrain.getSpeed());
+
+
+
+//        firstRadarSpeedGun.calculateTotalSpeed(125);
+//        firstRadarSpeedGun.calculateTotalSpeed(10);
 
 
         System.out.println(firstRadarSpeedGun.totalSpeed);
+
+
+        System.out.println(firstRadarSpeedGun.allMovingList);
+        firstRadarSpeedGun.printRadarSpeedGun();
 
 
 
